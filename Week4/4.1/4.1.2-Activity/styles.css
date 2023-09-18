@@ -1,0 +1,52 @@
+/* styling body element */
+body {
+  font-family: Arial;
+  background-color: #f0f0f0;
+}
+
+/* Styling favorite dogs list */
+ul.favorite-dogs {
+  list-style-type: none;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px;
+}
+
+
+/* style h1 element */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* style h2 element */
+h2 {
+  color: #007acc;
+  margin-top: 20px;
+}
+
+/* styling the the paragraph elements */
+p {
+  color: #444;
+  margin: 10px;
+}
+
+/* styling to images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Changing to red when hovering */
+ul.favorite-dogs li:hover {
+  color: #ff5733;
+}
+
+/* styling sibling element*/
+h2 + p {
+  font-weight: bold;
+}
