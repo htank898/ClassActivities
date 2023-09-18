@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beagle Central</title>
+  <style>
+    /* styling body element */
+    body {
+      font-family: Arial;
+      background-color: #f0f0f0;
+    }
+
+    /* Styling favorite dogs list */
+    ul.favorite-dogs {
+      list-style-type: none;
+      text-align: center;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 20px;
+    }
+
+
+    /* style h1 element */
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* style h2 element */
+    h2 {
+      color: #007acc;
+      margin-top: 20px;
+    }
+
+    /* styling the the paragraph elements */
+    p {
+      color: #444;
+      margin: 10px;
+    }
+
+    /* styling to images */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
+    /* Changing to red when hovering */
+    ul.favorite-dogs li:hover {
+      color: #ff5733;
+    }
+
+    /* styling sibling element*/
+    h2 + p {
+      font-weight: bold;
+    }
+
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- Use class attribute to style the favorite dogs list -->
+<ul class="favorite-dogs">
+  <h1>Here is a list of Dogs</h1>
+  <li>Beagle</li>
+  <li>Beagle</li>
+  <li>Not Beagle</li>
+</ul>
+
+<h2>Did you notice one of them was not a beagle?</h2>
+
+<!-- Apply sibling styles to this paragraph -->
+<p>This is because...<br> Not All dogs are beagles</p>
+
+<p>Here is an example of a beagle</p>
+<p><img src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2016/06/24151048/Beagle-standing-in-a-frosty-field-on-a-cold-morning.jpg" alt="local photo"></p>
+
+
+<script>
+// select the root node
+const body = document.querySelector("body");
+console.log("The body node is: ", body);
+
+// select the last child of the root node
+const lastChild = body.lastElementChild;
+console.log(lastChild);
+
+// select all the children of the body element
+const allChildren = body.children;
+console.log(allChildren);
+
+// select the next sibling of the h2 node
+const h2Node = document.querySelector("h2");
+const sibling = h2Node.nextElementSibling;
+console.log(sibling);
+
+// select the parent element of the h1 node
+const h1Node = document.querySelector("h1");
+const h1Parent = h1Node.parentElement;
+console.log(h1Parent);
+
+
+// create a new unordered list (ul) element
+const newUl = document.createElement('ul');
+// remove the paragraph element in the nav-bar
+const navBar = document.getElementById('nav-bar');
+const paragraphToRemove = navBar.('p');
+// add your new ul element to the nav-bar
+navBar.appendChild(newUl);
+// create two new list item (li) elements, and add some text to them
+const li1 = document.createElement('li');
+
+const li2 = document.createElement('li');
+
+// add the li elements to the ul in the nav-bar
+newUl.appendChild(li1);
+newUl.appendChild(li2);
+
+  </script>
+</body>
+</html>
